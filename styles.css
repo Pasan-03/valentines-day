@@ -277,6 +277,7 @@ input:focus {
     /* For dodging button context */
     min-height: 60px;
     /* Reserve space for buttons */
+    justify-content: center;
 }
 
 /* Dodging Button Logic */
