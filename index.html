@@ -6,50 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="A special question for a special person.">
 </head>
 
 <body>
 
+    <!-- Independent Background Layer -->
     <div class="heart-bg" aria-hidden="true"></div>
 
+    <!-- Centered Content Wrapper -->
     <main class="container">
 
-        <!-- The Ask Card -->
-        <section id="ask-card" class="card fade-in">
-            <div class="content-wrapper">
-                <h1 class="main-question">Will you be my Valentine?</h1>
-                <p class="names-display">
-                    To: <span id="display-her-name" class="highlight">Nayanathara</span><br>
-                    From: <span id="display-your-name" class="highlight">Pasan</span>
-                </p>
+        <section id="ask-card" class="card">
+            <h1 class="main-question">Will you be my Valentine?</h1>
 
-                <div class="plan-selector">
-                    <label>Choose the Date Plan</label>
-                    <div class="pills">
-                        <button class="pill active" data-plan="Dinner & Movie">Dinner & Movie</button>
-                        <button class="pill" data-plan="Picnic in the Park">Picnic in the Park</button>
-                    </div>
-                </div>
+            <p class="names-display">
+                To: <span class="highlight">Nayanathara</span><br>
+                From: <span class="highlight">Pasan</span>
+            </p>
 
-                <div class="actions">
-                    <button id="yes-btn" class="btn primary big">YES! 💖</button>
-                    <button id="no-btn" class="btn secondary big">No</button>
+            <div class="plan-selector">
+                <label>Choose Our Date</label>
+                <div class="pills">
+                    <button class="pill active" data-plan="Dinner & Movie">Dinner & Movie</button>
+                    <button class="pill" data-plan="Picnic in the Park">Picnic in the Park</button>
+                    <button class="pill" data-plan="Stargazing">Stargazing</button>
                 </div>
+            </div>
+
+            <div class="actions">
+                <button id="yes-btn" class="btn primary">YES! 💖</button>
+                <button id="no-btn" class="btn secondary">No</button>
             </div>
         </section>
 
-        <!-- Success Overlay -->
-        <div id="success-overlay" class="overlay hidden">
-            <div class="overlay-content">
-                <h1>It's a Date! 💖</h1>
-                <p>I can't wait to see you, <span id="success-her-name">Nayanathara</span>!</p>
-                <p class="fine-print">Screenshot this and send it to me!</p>
-                <button id="reset-btn" class="btn text-only">Start Over</button>
-            </div>
-        </div>
-
     </main>
+
+    <!-- Hidden Success Overlay -->
+    <div id="success-overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h1>It's a Date! 💖</h1>
+            <p>I can't wait for our <br><span id="final-plan" class="highlight">Dinner & Movie</span>!</p>
+            <p class="fine-print">Take a screenshot & send it to me!</p>
+            <button id="reset-btn" class="btn text-only">Start Over</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
