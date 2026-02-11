@@ -20,11 +20,9 @@
     padding: 0;
 }
 
-html,
-body {
-    height: 100%;
-    overflow: hidden;
-    /* Prevent scrollbars from animations */
+html {
+    /* Allow scrolling if needed */
+    height: auto;
 }
 
 body {
@@ -32,11 +30,20 @@ body {
     color: var(--text-main);
     font-family: var(--font-stack);
 
-    /* Perfect Centering Logic */
-    display: grid;
-    place-items: center;
+    /* Layout Logic: Flex + Margin Auto for safe centering */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Helper for horizontal alignment */
+    /* justifyContent is handled by margin:auto on the child */
+
+    /* Breathing room */
+    padding: 40px 20px;
+
     position: relative;
-    width: 100vw;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from stray elements */
 }
 
 /* Background Animation Layer - Completely Independent */
@@ -77,16 +84,19 @@ body {
     }
 }
 
-/* Main Container - Ensuring it doesn't shift */
+/* Main Container */
 .container {
     position: relative;
     z-index: 10;
-    /* Above background */
     width: 100%;
+
+    /* Safe Centering magic: */
+    /* pushing it to the center vertically if space permits, */
+    /* but stays at text flow if content is taller than screen */
+    margin: auto 0;
+
     display: flex;
     justify-content: center;
-    padding: 20px;
-    /* Safe padding for mobile edges */
 }
 
 /* The Ask Card */
